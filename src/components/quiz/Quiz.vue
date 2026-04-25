@@ -35,13 +35,13 @@ const restart = () => {
 </script>
 
 <template>
-  <main class="min-h-screen flex items-center justify-center p-4">
+  <div class="min-h-screen flex items-center justify-center p-4">
     <div class="w-full max-w-4xl">
       <QuizStart v-if="step === 'start'" @start="startQuiz" />
 
       <QuizStep
         v-else-if="step === 'quiz'"
-        :question="questions[currentQuestionIndex]"
+        :question="questions[currentQuestionIndex]!"
         :current-value="answers[currentQuestionIndex]"
         :is-first="currentQuestionIndex === 0"
         :is-last="currentQuestionIndex === questions.length - 1"
@@ -54,5 +54,5 @@ const restart = () => {
 
       <QuizResult v-else-if="step === 'result'" :answers="answers" @restart="restart" />
     </div>
-  </main>
+  </div>
 </template>
