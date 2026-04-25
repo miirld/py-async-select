@@ -32,6 +32,14 @@ const frameworksList = computed(() => FRAMEWORKS.join(', '))
         в&nbsp;соответствии с&nbsp;Вашими ответами.
       </p>
 
+      <p>
+        Ознакомиться с&nbsp;матрицей рекомендаций можно по&nbsp;<span class="text-nowrap"
+          ><RouterLink to="/rec-table" class="underline underline-offset-4"
+            >ссылке</RouterLink
+          ></span
+        >
+      </p>
+
       <Separator />
 
       <p><span class="font-medium">Рассматриваемые фреймворки: </span>{{ frameworksList }}</p>
@@ -44,12 +52,6 @@ const frameworksList = computed(() => FRAMEWORKS.join(', '))
           </li>
         </ul>
       </div>
-
-      <p>
-        Ознакомиться с&nbsp;матрицей рекомендаций можно по&nbsp;<span class="text-nowrap"
-          ><RouterLink to="/rec-table" class="underline underline-offset-4">ссылке</RouterLink></span
-        >
-      </p>
     </CardContent>
     <CardFooter>
       <Button size="lg" class="w-full text-base" @click="$emit('start')">Начать опрос</Button>

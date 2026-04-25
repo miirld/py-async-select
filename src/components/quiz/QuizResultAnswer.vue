@@ -36,7 +36,7 @@ const isSelected = (idx: number) => selectedIndex.value === idx
       >
         <CardContent class="flex gap-2 opacity-70">
           <component :is="isSelected(oIdx) ? CheckCircle2 : Circle" class="w-5 h-5 shrink-0" />
-          <p v-html="opt.text" class="text-sm"/>
+          <p v-html="opt.text" class="text-sm" />
         </CardContent>
       </Card>
     </CardContent>

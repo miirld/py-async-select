@@ -22,29 +22,31 @@ const rows = computed<Row[]>(() =>
 </script>
 
 <template>
-  <div class="min-h-screen p-8 max-w-6xl mx-auto">
-    <div class="flex items-center justify-between mb-6">
-      <h1 class="text-3xl font-semibold tracking-tight">Матрица рекомендательной системы</h1>
+  <div class="min-h-screen p-4 sm:p-8 max-w-6xl mx-auto space-y-4">
+    <h1 class="text-3xl font-semibold tracking-tight">Матрица рекомендательной системы</h1>
+    <p>
       <RouterLink to="/" class="underline underline-offset-4">Вернуться к&nbsp;опросу</RouterLink>
-    </div>
+    </p>
 
-    <table class="w-full border border-foreground border-collapse">
-      <thead>
-        <tr class="border-b border-foreground">
-          <th class="p-3 text-left border-r border-foreground">Критерий</th>
-          <th class="p-3 text-left border-r border-foreground">Условие</th>
-          <th class="p-3 text-left">Рекомендация</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr v-for="(row, idx) in rows" :key="idx" class="border-b border-foreground">
-          <td class="p-3 border-r border-foreground align-top">
-            {{ row.criterion }}
-          </td>
-          <td class="p-3 border-r border-foreground align-top" v-html="row.condition" />
-          <td class="p-3 align-top">{{ row.recommendation }}</td>
-        </tr>
-      </tbody>
-    </table>
+    <div class="overflow-x-auto">
+      <table class="w-full border border-foreground border-collapse">
+        <thead>
+          <tr class="border-b border-foreground">
+            <th class="p-3 text-left border-r border-foreground">Критерий</th>
+            <th class="p-3 text-left border-r border-foreground">Условие</th>
+            <th class="p-3 text-left">Рекомендация</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="(row, idx) in rows" :key="idx" class="border-b border-foreground">
+            <td class="p-3 border-r border-foreground align-top">
+              {{ row.criterion }}
+            </td>
+            <td class="p-3 border-r border-foreground align-top" v-html="row.condition" />
+            <td class="p-3 align-top">{{ row.recommendation }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 </template>
