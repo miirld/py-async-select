@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { RouterView } from 'vue-router'
+import Quiz from '@/components/quiz/Quiz.vue'
 </script>
 
 <template>
-  <RouterView />
+  <Quiz />
 </template>

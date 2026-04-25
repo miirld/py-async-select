@@ -1,6 +1,8 @@
+import type { Question } from '@/types'
+
 export const FRAMEWORKS = ['FastAPI', 'Sanic', 'aiohttp', 'Litestar', 'Tornado']
 
-export const questions = [
+export const questions: Question[] = [
   {
     criterion: 'Производительность',
     description:
