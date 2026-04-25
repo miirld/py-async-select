@@ -2,21 +2,21 @@
 import type { HTMLAttributes } from 'vue'
 import { cn } from '@/lib/utils'
 
-const props = defineProps<{
+defineProps<{
   class?: HTMLAttributes['class']
 }>()
 </script>
 
 <template>
-  <div
-    data-slot="card"
+  <p
+    data-slot="empty-description"
     :class="
       cn(
-        'bg-card text-card-foreground flex flex-col gap-6 rounded-xl border py-6 shadow-sm',
-        props.class,
+        'text-muted-foreground [&>a:hover]:text-primary text-sm/relaxed [&>a]:underline [&>a]:underline-offset-4',
+        $attrs.class ?? '',
       )
     "
   >
     <slot />
-  </div>
+  </p>
 </template>
