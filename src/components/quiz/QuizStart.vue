@@ -14,7 +14,7 @@ const frameworksList = computed(() => FRAMEWORKS.join(', '))
   <Card class="max-w-3xl mx-auto">
     <CardHeader>
       <CardTitle class="text-3xl tracking-tight">
-        Система рекомендаций для подбора асинхронного Python-фреймворка
+        Рекомендательная система для подбора асинхронного Python-фреймворка
       </CardTitle>
     </CardHeader>
     <CardContent class="space-y-4 text-lg text-foreground/80">
